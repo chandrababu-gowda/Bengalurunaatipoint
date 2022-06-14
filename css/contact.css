@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Aladin&family=Jost&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif; 
+    font-size: 18px;
+    /* color: var(--tertiaryColour); */
+}
+
+/* font-family: 'Aladin', cursive;
+font-family: 'Jost', sans-serif; */
+
+:root{
+    --primaryColour:#F1DABF;
+    --secondaryColour:#362417;
+    --tertiaryColour:#2C3333;
+    --bgColour:#FFFBFF;
+    --boxShadow:0px 7px 29px rgba(100,100,111,0.2);
+    --minPadding:60px 150px;
+    --headingFontSize:60px;
+    --headingLetterSpacing:3px;
+}
+
+body{
+    background-color: var(--bgColour);
+    overflow-x: hidden;
+    /* padding: 0px 150px; */
+}
+
+/* navbar */
+.logo{
+    font-family: 'Aladin', cursive;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+nav{
+    color: var(--primaryColour);
+    background-color: var(--secondaryColour);
+    padding: 15px 150px;
+    display: flex;  
+    /* margin: 10px;   */
+}
+
+.link{
+    position: absolute;
+    top: 15px;
+    right: 150px;
+}
+
+.links{
+    color: var(--primaryColour);
+    text-decoration: none;
+    margin: 0px 15px;
+    border-bottom: 2px solid var(--secondaryColour);
+    transition: border-bottom 0.25s;
+}
+
+.links:hover{
+    border-bottom: 2px solid var(--primaryColour);
+}
+
+/* Section */
+
+section h1{
+    font-family: 'Aladin', cursive;
+    font-size: var(--headingFontSize);
+    letter-spacing: var(--headingLetterSpacing);
+
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* padding: 100px 0px; */
+    height: 90vh;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+
+}
+
+.inputs{
+    height: 50px;
+    margin: 10px;
+    padding: 10px;
+    border: 0px solid var(--secondaryColour);
+    border-bottom: 2px solid var(--secondaryColour);
+    border-radius: 2px;
+    background-color: var(--bgColour);
+
+}
+
+textarea{
+    height: 200px;
+    margin: 10px;
+    padding: 10px;
+    border: 0px solid var(--secondaryColour);
+    border-bottom: 2px solid var(--secondaryColour);
+    border-radius: 2px;
+    background-color: var(--bgColour);
+}
+
+
+button{
+    margin: 10px;
+    padding: 10px;
+    /* border: 2px solid var(--secondaryColour); */
+    background-color: var(--secondaryColour);
+    color: var(--primaryColour);
+    border-radius: 8px;
+    transition: background-color, 0.3s;
+
+}
+
+button:hover{
+    background-color: var(--primaryColour);
+    color: var(--secondaryColour);
+
+}

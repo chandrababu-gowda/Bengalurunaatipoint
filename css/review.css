@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Aladin&family=Jost&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif; 
+    font-size: 18px;
+    /* color: var(--tertiaryColour); */
+}
+
+/* font-family: 'Aladin', cursive;
+font-family: 'Jost', sans-serif; */
+
+:root{
+    --primaryColour:#F1DABF;
+    --secondaryColour:#362417;
+    --tertiaryColour:#2C3333;
+    --bgColour:#FFFBFF;
+    --boxShadow:0px 7px 29px rgba(100,100,111,0.2);
+    --minPadding:60px 150px;
+    --headingFontSize:60px;
+    --headingLetterSpacing:3px;
+}
+
+body{
+    background-color: var(--bgColour);
+    overflow-x: hidden;
+    /* padding: 0px 150px; */
+}
+
+/* navbar */
+.logo{
+    font-family: 'Aladin', cursive;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+nav{
+    color: var(--primaryColour);
+    background-color: var(--secondaryColour);
+    padding: 15px 150px;
+    display: flex;  
+    /* margin: 10px;   */
+}
+
+.link{
+    position: absolute;
+    top: 15px;
+    right: 150px;
+}
+
+.links{
+    color: var(--primaryColour);
+    text-decoration: none;
+    margin: 0px 15px;
+    border-bottom: 2px solid var(--secondaryColour);
+    transition: border-bottom 0.25s;
+}
+
+.links:hover{
+    border-bottom: 2px solid var(--primaryColour);
+}
+
+/* Section */
+/* Section 1 (Youtube reviews) */
+
+.section{
+    color: var(--tertiaryColour);
+    padding: var(--minPadding);
+}
+
+.section-1 h1{
+    font-size: var(--headingFontSize);
+    letter-spacing: var(--headingLetterSpacing);
+    font-family: 'Aladin', cursive;
+}
+
+#video{
+    display: flex;
+    padding: 30px 0px;
+}
+
+.reviewVideo{
+    padding: 0px 30px 0px 0px ;
+}
+
+.reviewVideo h3{
+    margin: 5px ;
+}
+
+/* Section - 2 (Reviews) */
+
+.section-2 h1{
+    font-size: var(--headingFontSize);
+    letter-spacing: var(--headingLetterSpacing);
+    font-family: 'Aladin', cursive;
+}
+.section-3 h1{
+    font-size: var(--headingFontSize);
+    letter-spacing: var(--headingLetterSpacing);
+    font-family: 'Aladin', cursive;
+}
+
+.slider{
+    position: relative;
+    /* height: 1250px; */
+    /* overflow-x: hidden; */
+}
+
+.slide{
+    display: flex;
+    position: absolute;
+    top:0;
+    transition: transform 1s;
+}
+
+.newSlide{
+    display: flex;
+    position: absolute;
+    top:0;
+    transition: transform 1s;
+
+}
+
+.slide_btn{
+    box-shadow: var(--boxShadow);
+    background-color: #fff;
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    border-radius: 100px;
+    z-index: 10;
+    position: relative;
+    top: 0px;
+}
+.slider_btn--left{
+    top: 50px;
+    left: -50px;
+}
+.slider_btn--right{
+    left: 1100px;
+    top: -25px;
+}
+.newSlider_btn--left{
+    top: 50px;
+    left: -50px;
+}
+.newSlider_btn--right{
+    left: 1100px;
+    top: -25px;
+}
+
+.slide_btn img{
+    width: 50px;
+    z-index: 5;
+}
+
+.reviewCard{
+    width: 30%;
+    height: 9rem;
+    margin: 15px;
+    box-shadow: var(--boxShadow);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.reviewCard p:nth-child(2){
+    position: absolute;
+    bottom: 30px;
+}
+
+
+
+
+
+
+
+/* Footer */
+
+footer{
+    color: var(--primaryColour);
+    background-color: var(--secondaryColour);
+    padding: 25px 150px;
+    display: flex;
+}
+
+footer>div{
+    width:384px ;
+    padding: 10px 15px ;
+}
+
+footer div h2{
+    font-size: var(--headingFontSize);
+    font-family: 'Aladin', cursive;
+    letter-spacing: var(--headingLetterSpacing);
+}
+
+#address{
+    display: flex;
+}
+
+#address span{
+    margin: 0px 7px;
+    width: 310px;
+}
+
+#timings {
+    display: flex;
+    /* margin: 0px 2px; */
+    /* flex-direction: row; */
+}
+
+#timings span{
+    margin: 0px 7px;
+}
