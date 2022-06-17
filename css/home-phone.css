@@ -18,9 +18,9 @@ font-family: 'Jost', sans-serif; */
     --tertiaryColour:#2C3333;
     --bgColour:#FFFBFF;
     --boxShadow:0px 7px 29px rgba(100,100,111,0.2);
-    --minPadding:60px 150px;
-    --headingFontSize:60px;
-    --headingLetterSpacing:3px;
+    --headingFontSize:40px;
+    --headingLetterSpacing:2px;
+    --test-border:2px solid red;
 }
 
 body{
@@ -29,7 +29,11 @@ body{
     /* padding: 0px 150px; */
 }
 
-/* navbar */
+
+
+
+
+/* Navbar */
 .logo{
     font-family: 'Aladin', cursive;
     letter-spacing: 2px;
@@ -39,57 +43,74 @@ body{
 nav{
     color: var(--secondaryColour);
     background-color: var(--primaryColour);
-    padding: 15px 150px;
+    padding: 15px 25px;
     display: flex;  
     /* margin: 10px;   */
 }
 
-.link{
+.hamburger{
+    color: var(--secondaryColour);
     position: absolute;
-    top: 15px;
-    right: 150px;
+    right: 25px;
+    width: 23px;
+}
+
+/* Need to change */
+
+.link{
+    display: flex;
+    flex-direction: column;
+    /* border: var(--test-border); */
+    background-color: var(--secondaryColour);
+    padding: 10px;
+    border-radius: 4px;
+    position: absolute;
+    top: 45px;
+    right: 25px;
 }
 
 .links{
-    color: var(--secondaryColour);
+    /* display: none; */
+    color: var(--primaryColour);
     text-decoration: none;
-    margin: 0px 15px;
+    margin: 5px;
     border-bottom: 2px solid var(--primaryColour);
     transition: border-bottom, 0.25s;
     font-weight: 600;
 }
 
-.links:hover{
-    border-bottom: 2px solid var(--secondaryColour);
-}
-
-.hamburger{
+.hidden{
     display: none;
 }
+
 
 /* Hero */
 #heroBox{
     background-color: var(--primaryColour);
-    padding: var(--minPadding);
+    /* border: var(--test-border); */
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* padding: var(--minPadding); */
 }
 
-#hero{
-    display: grid;
-    grid-template-columns: 50% 50%;
-}
+
 
 #tagline{
     display: flex;
     flex-direction: column;
     /* align-items: center; */
     justify-content: center;
+    /* border: var(--test-border); */
+    padding: 25px;
 
 }
 
 #tagline h1{
     font-family: 'Aladin', cursive;
-    font-size: 110px;
-    line-height: 110px;
+    font-size: 60px;
+    line-height: 60px;
     color: var(--secondaryColour);
     letter-spacing: 2px;
 
@@ -97,25 +118,26 @@ nav{
 
 #tagline span{
     font-family: 'Aladin', cursive;
-    font-size: 110px;
-    line-height: 110px;
-    color: #36241747;
+    font-size: 60px;
+    line-height: 60px;
+    color: #36241776;
 
 }
 
 #foodImage img{
-    width: 49vw;
+    width: 0vw;
 }
 
 .foodLinks{
     margin: 45px 0px ;
+    /* border: var(--test-border); */
 }
 
 .foodLink{
-    margin: 0px 10px ;
+    margin: 0px 5px;
     text-decoration: none;
     color: var(--secondaryColour);
-    padding: 5px 20px ;
+    padding: 0px 8px ;
     border-radius: 4px;
     border: 3px solid var(--secondaryColour);
     transition: background-color, 0.3s;
@@ -126,11 +148,10 @@ nav{
     color: var(--primaryColour);
 }
 
-
 /* Menu Section */
 #menu{
     color: var(--tertiaryColour);
-    padding: var(--minPadding);
+    padding: 25px;
     /* border: 5px solid red; */
     height: 100%;
 }
@@ -147,17 +168,16 @@ nav{
 }
 
 .menuList p{
-    font-size: 25px;
+    font-size: 18px;
     font-weight: bold;
-    margin: 50px 60px 50px 0px;
+    margin: 10px;
 }
-
 
 .slider{
     position: relative;
-    height: 600%;
+    /* height: 600%; */
     /* border: 1px solid red; */
-    height: 160vh;
+    height: 280vh;
     width: 100%;
     /* padding: 15px; */
     overflow-x: hidden;
@@ -165,72 +185,74 @@ nav{
 }
 
 .slide{
+    /* border: var(--test-border); */
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(4,24.5%);
+    grid-template-columns: repeat(2, 49%);
     grid-gap: 1rem;
     position: absolute;
     top:0;
+    /* left: 10%; */
     transition: transform 1s;
     /* margin: 0px 0px; */
-    padding: 0px 60px 0px 0px;
-    /* margin:  0px 30px; */
+    padding: 0px 20px 0px 0px;
+    /* margin:  0px 20px; */
 }
 
 .slide_btn{
     box-shadow: var(--boxShadow);
     background-color: #fff;
-    width: 75px;
-    height: 75px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 1;
     border-radius: 100px;
     z-index: 10;
-    position: relative;
-    top: 380px;
+    position: absolute;
+    top: 13rem;
 }
 .slider_btn--left{
     left: 2%;
 }
 .slider_btn--right{
-    left: 92%;
-    top: 308px;
+    right: 2%;
+    /* top: 308px; */
 }
 
 .slide_btn img{
-    width: 50px;
+    width: 30px;
     z-index: 5;
 }
 
 .food_slide{
     /* border: 1px solid black; */
     box-shadow: var(--boxShadow);
-    height: 20rem;
+    height: 100%;
     /* border: 1px solid green; */
     display: flex;
     flex-direction: column;
     align-items: center;
     /* justify-content: center; */
     border-radius: 8px;
-    /* z-index: -1; */
+    z-index: -1;
     /* justify-content: center; */
     /* margin: 15px; */
 }
 
 .food_slide img{
     border-radius: 8px 8px 0px 0px;
-    /* z-index: -1; */
+    z-index: -1;
     width: 100%;
 }
 
 .food_slide h3{
-    font-size: 25px;
+    font-size: 20px;
     margin: 20px;
     /* padding: 35px 0px 0px 0px; */
     /* border: 1px solid black; */
 }
-
 
 /* Footer */
 
@@ -239,14 +261,11 @@ footer{
     bottom: 0; */
     color: var(--primaryColour);
     background-color: var(--secondaryColour);
-    padding: 25px 150px;
-    display: flex;
+    padding: 25px;
+    /* display: flex; */
 }
 
-footer>div{
-    width:384px ;
-    padding: 10px 15px ;
-}
+
 
 footer div h2{
     font-size: var(--headingFontSize);

@@ -18,18 +18,22 @@ font-family: 'Jost', sans-serif; */
     --tertiaryColour:#2C3333;
     --bgColour:#FFFBFF;
     --boxShadow:0px 7px 29px rgba(100,100,111,0.2);
-    --minPadding:60px 150px;
-    --headingFontSize:60px;
-    --headingLetterSpacing:3px;
+    --headingFontSize:40px;
+    --headingLetterSpacing:2px;
+    --test-border:2px solid red;
 }
 
 body{
     background-color: var(--bgColour);
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     /* padding: 0px 150px; */
 }
 
-/* navbar */
+
+
+
+
+/* Navbar */
 .logo{
     font-family: 'Aladin', cursive;
     letter-spacing: 2px;
@@ -37,32 +41,43 @@ body{
 }
 
 nav{
-    color: var(--primaryColour);
-    background-color: var(--secondaryColour);
-    padding: 15px 150px;
+    color: var(--secondaryColour);
+    background-color: var(--primaryColour);
+    padding: 15px 25px;
     display: flex;  
     /* margin: 10px;   */
 }
 
-.link{
+.hamburger{
+    color: var(--secondaryColour);
     position: absolute;
-    top: 15px;
-    right: 150px;
+    right: 25px;
+    width: 23px;
+}
+
+.link{
+    display: flex;
+    flex-direction: column;
+    /* border: var(--test-border); */
+    background-color: var(--secondaryColour);
+    padding: 10px;
+    border-radius: 4px;
+    position: absolute;
+    top: 45px;
+    right: 25px;
 }
 
 .links{
+    /* display: none; */
     color: var(--primaryColour);
     text-decoration: none;
-    margin: 0px 15px;
-    border-bottom: 2px solid var(--secondaryColour);
-    transition: border-bottom 0.25s;
-}
-
-.links:hover{
+    margin: 5px;
     border-bottom: 2px solid var(--primaryColour);
+    transition: border-bottom, 0.25s;
+    font-weight: 600;
 }
 
-.hamburger{
+.hidden{
     display: none;
 }
 
@@ -87,7 +102,8 @@ section{
 form{
     display: flex;
     flex-direction: column;
-    width: 25%;
+    /* border: var(--test-border); */
+    width: 90%;
 
 }
 
@@ -95,7 +111,7 @@ form{
     height: 50px;
     margin: 10px;
     padding: 10px;
-    border: 0px solid var(--secondaryColour);
+    border:0px solid var(--secondaryColour);
     border-bottom: 2px solid var(--secondaryColour);
     border-radius: 2px;
     background-color: var(--bgColour);

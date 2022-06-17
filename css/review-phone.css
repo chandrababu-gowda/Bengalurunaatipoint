@@ -18,18 +18,22 @@ font-family: 'Jost', sans-serif; */
     --tertiaryColour:#2C3333;
     --bgColour:#FFFBFF;
     --boxShadow:0px 7px 29px rgba(100,100,111,0.2);
-    --minPadding:60px 150px;
-    --headingFontSize:60px;
-    --headingLetterSpacing:3px;
+    --headingFontSize:40px;
+    --headingLetterSpacing:2px;
+    --test-border:2px solid red;
 }
 
 body{
     background-color: var(--bgColour);
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     /* padding: 0px 150px; */
 }
 
-/* navbar */
+
+
+
+
+/* Navbar */
 .logo{
     font-family: 'Aladin', cursive;
     letter-spacing: 2px;
@@ -37,40 +41,65 @@ body{
 }
 
 nav{
-    color: var(--primaryColour);
-    background-color: var(--secondaryColour);
-    padding: 15px 150px;
+    color: var(--secondaryColour);
+    background-color: var(--primaryColour);
+    padding: 15px 25px;
     display: flex;  
     /* margin: 10px;   */
 }
 
-.link{
+.hamburger{
+    color: var(--secondaryColour);
     position: absolute;
-    top: 15px;
-    right: 150px;
+    right: 25px;
+    width: 23px;
+}
+
+.link{
+    display: flex;
+    flex-direction: column;
+    /* border: var(--test-border); */
+    background-color: var(--secondaryColour);
+    padding: 10px;
+    border-radius: 4px;
+    position: absolute;
+    top: 45px;
+    right: 25px;
 }
 
 .links{
+    /* display: none; */
     color: var(--primaryColour);
     text-decoration: none;
-    margin: 0px 15px;
-    border-bottom: 2px solid var(--secondaryColour);
-    transition: border-bottom 0.25s;
-}
-
-.links:hover{
+    margin: 5px;
     border-bottom: 2px solid var(--primaryColour);
+    transition: border-bottom, 0.25s;
+    font-weight: 600;
 }
 
-.hamburger{
+.hidden{
     display: none;
+}
+
+
+
+/* Footer */
+
+footer{
+    /* position: absolute;
+    bottom: 0; */
+    color: var(--primaryColour);
+    background-color: var(--secondaryColour);
+    padding: 25px;
+    /* display: flex; */
 }
 /* Section */
 /* Section 1 (Youtube reviews) */
 
+
 .section{
     color: var(--tertiaryColour);
-    padding: var(--minPadding);
+    padding: 25px;
 }
 
 .section-1 h1{
@@ -81,15 +110,21 @@ nav{
 
 #video{
     display: flex;
-    padding: 30px 0px;
+    flex-direction: column;
+    /* padding: 30px 0px; */
 }
 
 .reviewVideo{
-    padding: 0px 30px 0px 0px ;
+    /* padding: 0px 30px 0px 0px ; */
 }
 
 .reviewVideo h3{
     margin: 5px ;
+}
+
+iframe{
+    width: 100%;
+    /* height: 150%; */
 }
 
 /* Section - 2 (Reviews) */
@@ -107,12 +142,13 @@ nav{
 
 .slider{
     position: relative;
-    /* height: 1250px; */
-    /* overflow-x: hidden; */
+    height: 600px;
+    overflow-x: hidden;
 }
 
 .slide{
     display: flex;
+    flex-direction: column;
     position: absolute;
     top:0;
     transition: transform 1s;
@@ -120,6 +156,7 @@ nav{
 
 .newSlide{
     display: flex;
+    flex-direction: column;
     position: absolute;
     top:0;
     transition: transform 1s;
@@ -129,72 +166,66 @@ nav{
 .slide_btn{
     box-shadow: var(--boxShadow);
     background-color: #fff;
-    width: 75px;
-    height: 75px;
+    width: 50px;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
     opacity: 1;
     border-radius: 100px;
     z-index: 10;
-    position: relative;
+    position: absolute;
     top: 0px;
 }
 .slider_btn--left{
-    top: 50px;
-    left: -50px;
+    top: 150px;
+    left: -10px;
 }
 .slider_btn--right{
-    left: 1100px;
-    top: -25px;
+    top: 150px;
+    right: -10px;
 }
 .newSlider_btn--left{
-    top: 50px;
-    left: -50px;
+    top: 150px;
+    left: -10px;
 }
 .newSlider_btn--right{
-    left: 1100px;
-    top: -25px;
+    top: 150px;
+    right: -10px;
 }
 
 .slide_btn img{
-    width: 50px;
-    z-index: 5;
+    width: 30px;
+    /* z-index: 5; */
 }
 
 .reviewCard{
-    width: 30%;
+    /* width: 30%; */
+    /* position: absolute; */
     height: 9rem;
     margin: 15px;
     box-shadow: var(--boxShadow);
     padding: 20px;
     border-radius: 8px;
+    /* font-size: 10px; */
+    /* border: var(--test-border); */
 }
 
-.reviewCard p:nth-child(2){
-    position: absolute;
-    bottom: 30px;
+.reviewCard p{
+    font-size: 16px;
 }
 
 
-
-
+.peopleName{
+    /* border: var(--test-border); */
+    /* position: relative; */
+    /* bottom: 10px; */
+    /* top: 20px; */
+}
 
 
 
 /* Footer */
-
-footer{
-    color: var(--primaryColour);
-    background-color: var(--secondaryColour);
-    padding: 25px 150px;
-    display: flex;
-}
-
-footer>div{
-    width:384px ;
-    padding: 10px 15px ;
-}
 
 footer div h2{
     font-size: var(--headingFontSize);

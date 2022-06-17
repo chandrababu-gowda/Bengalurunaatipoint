@@ -4,13 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../css/about.css" />
+    <link rel="stylesheet" href="../css/about-phone.css" media="screen and (max-width:426px)">
+    <link rel="stylesheet" href="../css/about.css" media="screen and (min-width:426px)"/>
     <title>About Us</title>
   </head>
   <body>
     <nav>
       <div class="logo">BNP</div>
-      <div class="link">
+      <div><img class="hamburger" src="../images/hamburger.svg" alt=""></div>
+      <div class="link hidden">
         <a href="../index.html" class="links">Home</a>
         <a href="#" class="links">About Us</a>
         <a href="./review.html" class="links">Review</a>
@@ -59,5 +61,6 @@
         </p>
       </div>
     </footer>
+    <script src="../hamburger.js"></script>
   </body>
 </html>
